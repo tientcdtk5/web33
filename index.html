@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vẽ thiết kế UML sử dụng ChatGPT</title>
+    <link rel="stylesheet" href="./acset/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="./acset/font/themify-icons/themify-icons.css"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./acset/img/ce4f544cf302130777ecf32e24b1b9f8.png"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo" >
+        <a href="">
+          <img src="./acset/img/Untitled.png" alt="techmaster" />
+        </a>
+      </div>
+      <div class="nav_menu">
+          <a href="">KHÓA HỌC</a>
+          <a href="">SẢN PHẨM HỌC VIÊN</a>
+          <a href="">KHAI GIẢNG</a>
+          <a href="">BLOG</a></li>
+          <a href="">TRẢI NGHIỆM</a>
+         <a href=""></a><i class="ti-shopping-cart"></i>
+         <a href=""
+              ><img
+                src="./acset/img/ce4f544cf302130777ecf32e24b1b9f8.png"
+                alt="" /></a>
+      </div>
+    </header>
+    <div class="list">
+      <span>Trang chủ > Blog > Vẽ thiết kế UML sử dụng ChatGPT</span>
+      <hr />
+    </div>
+    <main>
+      <div class="content_a">
+        <div class="blog">
+          <h1>Vẽ thiết kế UML sử dụng ChatGPT</h1>
+          <i>13 tháng 02, 2023 - 730 lượt xem</i>
+          <br />
+          <button>Big data AI</button>
+          <button>Lập trình</button>
+          <br>
+          <hr />
+          <div>
+            <p>
+              ChatGPT chưa thể sinh hình ảnh, bản vẽ thiết kế hay biểu đồ. Tuy
+              nhiên ChatGPT có thể sinh mã để kết xuất ra bản vẽ (diagram) và
+              biểu đồ (chart). Bài viết dưới đây sẽ hướng dẫn bạn cách làm.
+            </p>
+          </div>
+          <h2>Đặt vấn đề</h2>
+          <span
+            >Bạn Ngô Hoàng Hùng là sinh viên lớp Java Spring Boot đang làm đồ án
+            web site quản lý nhà hàng bia và đồ án. Bố mẹ bạn ý đang sở hữu một
+            nhà hàng bia ở Hải Phòng.
+          </span>
+          <p>
+            Đồ án tại Techmaster sẽ có yêu cầu sinh viên phải tiến hành khâu lấy
+            yêu cầu, tóm tắt nghiệp vụ và thiết kế UML. Trong đồ án tốt nghiệp
+            của Hùng có một chức năng tích điểm thưởng (loyalty point) mỗi khi
+            khách hàng mua hàng.
+          </p>
+          <h2>Yêu cầu ChatGPT sinh bản vẽ thiết kế UML</h2>
+          <b>Hỏi:</b>
+          <p>
+            “Can you generate UML user case of loyalty points workflow in
+            restaurant. In loyalty workflow, customer make order, his loyal
+            point is accumulated. When loyalty point is over such a level, in
+            the next order, customer will be discounted or give a gift such as
+            free beer or snack.”
+          </p>
+          <b>GPT:</b>
+          <p>
+            Sure, here’s a sample UML Use Case Diagram for a loyalty points
+            workflow:
+          </p>
+          <pre>
+          @startuml title Loyalty Points Workflow
+          Actor Customer Customer ->
+          (EarnLoyalty Points) 
+          Customer -> (View Loyalty Points)
+          Customer ->(RedeemLoyalty Points) 
+          (Earn Loyalty Points) --> (View Loyalty Points)
+          (ViewLoyalty Points) --> (Redeem Loyalty Points) @enduml
+          </pre>
+          <pre>
+          In this diagram, the actor “Customer” interacts with three use cases:
+          “Earn Loyalty Points,” “View Loyalty Points,” and “Redeem Loyalty Points.”
+          The customer can earn loyalty points through purchases or other actions,
+          view their current loyalty points balance, and redeem their points for
+          rewards or discounts. The arrows show the relationships between the use
+          cases, indicating the flow of the customer’s interactions with the loyalty
+          points system .
+            </pre>
+          <strong>
+            Dùng:
+            <a href="https://app.diagrams.net/">https://app.diagrams.net/</a> để
+            vẽ UML</strong
+          >
+          <p>Chọn Menu: Arrange > Insert > Advanced > PlantUML…</p>
+          <img
+            src="./acset/img/c-5xsk-G.png"
+            alt="chèn PlantUML…"
+            style="width: 650px"
+          />
+          <p>Kết quả:</p>
+          <img
+            src="./acset/img/JkCdV4-l.png"
+            alt="kết quả"
+            style="width: 650px"
+          />
+          <strong><h2>Yêu cầu GPT vẽ sequence diagram</h2></strong>
+          <p>Kết quả GPT trả về</p>
+          <pre>
+          @startuml 
+          title Loyalty Workflow in Restaurant 
+          participant Customer
+          participant Waiter 
+          participant System 
+          Customer -> Waiter: Place Order
+          Waiter -> System: Record Order 
+          System -> System: Calculate Loyalty Points
+          System -> System: Check Loyalty Points 
+          alt Loyalty Points Over Threshold
+          System -> System: Apply Discount or Gift 
+          System -> Waiter: Notify Customerof Discount or Gift 
+          Waiter -> Customer: Confirm Discount or Gift 
+          else
+          Loyalty Points Below Threshold 
+          System -> System: No Discount or Gift end
+          Waiter -> Customer: Confirm Order and Payment 
+          Customer -> Waiter: Make
+          Payment
+          </pre
+          >
+          <p>
+            Copy code vào
+            <a href="https://www.diagrams.net/">diagrams.net</a> diagrams.net
+          </p>
+          <img
+            src="./acset/img/ZP9y3Ut9.png"
+            alt="kết quả diagram"
+            style="width: 650px"
+          />
+          <strong
+            ><h2>
+              Vậy Hùng chả phải làm đồ án mà là ChatGPT làm đồ án hộ Hùng?
+            </h2></strong
+          >
+          <p>
+            Thực tế là ChatGPT đã giúp Hùng làm được rất nhiều phần trong đồ án.
+            Tuy nhiên công việc của Hùng trong đồ án này là:
+          </p>
+          <ol>
+            <li>Nghĩ ra ý tưởng cho đồ án của mình.</li>
+            <li>Thu thập yêu cầu phản hồi từ người dùng.</li>
+            <li>
+              Biết cách ra lệnh cho ChatGPT: cần chia nhỏ các bước theo kiểu Top
+              Down: từ tổng quát đến chi tiết.
+            </li>
+            <li>
+              Xem xét, cân nhắc chọn lựa kết quả ChatGPT trả về. Chọn làm chức
+              năng nào trước và sau.
+            </li>
+            <li>
+              Tổng hợp, tích hợp các đoạn code ChatGPT vào dự án. Chắc chắn
+              không phải là chạy được ngay mà còn phải chỉnh sửa rất nhiều.
+            </li>
+            <li>
+              Thiết kế giao diện, trải nghiệm người dùng (cái này AI chưa làm
+              tới)
+            </li>
+            <li>
+              Khi dự án đã thành hình, nếu có yêu cầu phát sinh thì Hùng sẽ phải
+              chia nhỏ yêu cầu ra để có thể hỏi được ChatGPT còn không Hùng sẽ
+              phải tự code.
+            </li>
+          </ol>
+          <p>
+            Tóm lại Hùng có thể coi ChatGPT như một người thầy, một người bạn
+            code có kinh nghiệm hơn, đặc biệt họ có thể trả lời Hùng bất kỳ lúc
+            nào Hùng có câu hỏi.
+          </p>
+          <strong
+            ><h2>
+              Hùng vẫn băn khoăn làm sao để em có thể đặt câu hỏi tốt cho
+              ChatGPT?
+            </h2></strong
+          >
+          <p>
+            Thực tế các đoạn câu hỏi cho ChatGPT trong bài này là do một lập
+            trình viên có 28 năm kinh nghiệm, tiếng Anh IELTS 7 viết. Rõ ràng có
+            chiều sâu kinh nghiệm thì sẽ đặt được câu hỏi rõ ý đủ để ChatGPT trả
+            về kết quả tốt nhất. Có thực sự cần 28 năm kinh nghiệm hay IELTS 7
+            để ra lệnh cho ChatGPT không? Không ! Chỉ cần bạn có đọc viết được
+            tiếng Anh tốt, đúng ngữ pháp có một lượng từ vựng chuyên ngành phần
+            CNTT khoảng 120 từ và học lập trình bài bản khoảng 7 tháng là bạn có
+            thể làm việc với ChatGPT rồi. Nhưng ngược lại, nếu bạn hoàn toàn
+            chưa biết gì về lập trình, bạn hãy thử ra lệnh cho ChatGPT xem sao,
+            có gì chia sẻ lại để tôi cập nhật. Việc đặt câu hỏi tốt cho ChatGPT
+            cũng như chọn keyword đúng cho Google thôi. Thực ra là khó hơn vì
+            chúng ta phải viết đủ ý, rõ nghĩa, nhưng không có gì là không học
+            được, rèn luyện được. Chúc các bạn thành công.
+            <strong
+              ><i>
+                Nhớ đăng ký một khoá học lập trình ở Techmaster nhé. Hiện nay
+                Techmaster đã bổ xung nhiều tiết học hướng dẫn dùng ChatGPT để
+                phát triển phần mềm nhanh gấp 4-5 lần so với cách cổ điển.
+              </i></strong
+            >
+          </p>
+        
+      </div>
+      <div class="content_sile">
+        <h2>Tác Giả:</h2>
+         <a href="./infor.html">Nguyễn Văn A</a>
+      <img src="./acset/img/images.jfif" alt="avt" />
+      <br />
+     
+     
+      </div>
+    </main>
+    <footer>
+      <h3>Bải viết này có hữu ích?</h3>
+      <input name="yes" id="answer" type="radio">
+      <label for="answer">Hữu ích</label>
+      <input name="yes" id="answer-1" type="radio">
+      <label for="answer-1">Không hữu ích</label>
+      <hr>
+      <input id="comment" type="text">
+      <label for="comment"><button>Bình luận</button></label>
+      <br> 
+      <table>
+         <tr>
+            <td>CHỦ SỞ HỮU WEBSITE:</td>
+            <td>Công ty TNHH TechMaster Vietnam Ltd</td>
+           
+        </tr>
+        <tr>
+            <td>Số ĐKDN:</td>
+            <td>0105392153</td>
+           
+        </tr>
+        <tr>
+            <td>Ngày cấp: </td>
+            <td> 4-7-2011</td>
+           
+        </tr>
+      </table>
+    </footer>
+  </body>
+</html>
